@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up-Prayas75</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+        <!-- goggle font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  </head>
+  <body>
+    <section class="top-section">
+      <div class="navbar">
+          <img src="logo.gif" alt="logo" class="logo">
+          <ul>
+              <!-- <li><a class="Financial"  style="display: none;" href="Financial.html" style="text-decoration: none; color: #000;">Financial</a></li> -->
+              <li><a class="About" href="AboutUs.html" style="text-decoration: none; color: #000;">About Us</a></li>
+              <li><a class="FAQ" href="FAQ.html" style="text-decoration: none; color: #000;">FAQ</a></li>
+              <li><a class="Contact-Us" href="contactUs.html" style="text-decoration: none; color: #000;">Contact Us</a></li>
+              </ul>
+              <ul>
+              <li><button class="login"> Login</button></li>
+              <li><button class="donate">Donate</button></li>
+          </ul>
+      </div>
+  </section>
+
+    <div class="content_box">
+      <div class="h1_div">
+        <h1>SIGN UP</span></h1>
+      </div>
+
+      <!-- form section -->
+      <div class="form_element">
+        <form id="form">
+          <input
+            type="text"
+            placeholder="Enter your Name"
+            id="name_input"
+            class="name_input"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Enter your Email address"
+            id="email_input"
+            class="email_input"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Enter your phone number"
+            id="number_input"
+            class="number_input"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            id="password_input"
+            class="password_input"
+            required
+          />
+          <i class="fas fa-eye" id="eye"></i>
+          <img src="invisible.png" alt="eye" id="hide_eye">
+          <input
+            type="password"
+            placeholder="confirm your password"
+            id="confirm_password"
+            class="password_input"
+            required
+            />
+        </form>
+      </div>
+
+      <!-- button -->
+      <div class="button">
+        <button class="sign_up_button" id="sign_up_button" onclick="forSignUp()">Sign Up</button>
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+        <p class="footer_text">
+          Already have an account?
+          <a href="signin.html" class="footer_link" id="footer_link">Login</a>
+        </p>
+      </div>
+
+    </div>
+    <script>
+      const logo = document.querySelector(".logo");
+      logo.addEventListener('click',()=>{
+          window.open("index.html","_self");
+      })
+      const donate = document.querySelector(".donate");
+      donate.addEventListener('click',()=>{
+          window.open("Donate.html","_self");
+      })
+      const login = document.querySelector(".login");
+      login.addEventListener('click',()=>{
+          window.open("indexMain.html","_self");
+      })
+  </script>
+  </body>
+  <script src="sign_up.js"></script>
+  <script src="auth.js"></script>
+  <script src="progressbar.js"></script>
+</html>

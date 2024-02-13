@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayas 75</title>
+    <!-- goggle font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("VNKfZuOatWalLcVev");
+      })();
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Karla", sans-serif;
+      }
+
+      .top-section {
+        background-color: white;
+        padding: 10px 20px;
+        box-shadow: 0px 3px 20px rgb(204, 204, 204);
+        z-index: 1000;
+        position: sticky;
+        top: 0;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+      }
+
+      .logo {
+        width: 150px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+      }
+
+      li {
+        margin-right: 20px;
+      }
+
+      .login,
+      .donate {
+        font-weight: bold;
+        font-size: medium;
+        padding: 8px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      .login {
+        border: 2px solid rgb(52, 87, 244);
+        background-color: white;
+        color: rgb(52, 87, 244);
+      }
+
+      .donate {
+        background-color: rgb(52, 87, 244);
+        color: white;
+      }
+
+      .container {
+        max-width: 690px;
+        margin: 20px auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .form-element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1,
+      h4 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        font-weight: lighter;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ddd;
+        margin: 10px 0;
+        padding: 15px;
+        outline: none;
+        background: #f5f5f5;
+        font-size: medium;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: rgb(52, 87, 244);
+      }
+
+      span {
+        padding: 0 5px;
+        display: inline-block;
+        color: #555;
+      }
+
+      button.donation {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        background: rgb(52, 87, 244);
+        color: #fff;
+        font-size: larger;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        margin: 20px 0 0;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      button.donation:hover {
+        background-color: rgb(30, 60, 200);
+      }
+
+      .thank-you-page {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .organization-details {
+        margin-top: 20px;
+        color: #555;
+      }
+      .hr {
+        width: 100px;
+        margin-top: -5px;
+      }
+      p {
+        background-color: rgb(52, 87, 244);
+        padding: 10px;
+        border-radius: 5px;
+        width: 400px;
+        transition: padding 0.2s ease; 
+      }
+
+      p:hover {
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="top-section">
+      <div class="navbar">
+        <img src="logo.gif" alt="logo" class="logo" />
+        <ul>
+          <!-- <li><a class="Financial"  style="display: none;" href="Financial.html" style="text-decoration: none; color: #000;">Financial</a></li> -->
+          <li>
+            <a
+              class="About"
+              href="AboutUs.html"
+              style="text-decoration: none; color: #000"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              class="FAQ"
+              href="FAQ.html"
+              style="text-decoration: none; color: #000"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              class="Contact-Us"
+              href="contactUs.html"
+              style="text-decoration: none; color: #000"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li><button class="login" id="login">Login</button></li>
+          <li><button class="donate">Donate</button></li>
+        </ul>
+      </div>
+    </section>
+    <!-- account deatils -->
+    <div class="container">
+      <form class="form-element">
+        <h1>Thank You</h1>
+        <h4 class="thank-you-text">
+          We appreciate your thoughtfulness in helping poor deserving students
+          of BIT Sindri. To proceed with the payment, kindly transfer the funds
+          to the following account :-
+        </h4>
+
+        <h4>Organization Account Details</h4>
+        <hr class="hr" />
+        <p>Account Number: 242601000895</p>
+        <p>IFSC Code: ICIC0002426</p>
+        <p>Bank: ICICI BANK LIMITED</p>
+        <p>Account Holder Name: SUJIT KUMAR MITRA</p>
+      </form>
+    </div>
+
+    <div class="container">
+      <form class="form-element">
+        <h4>
+          If you encounter any issues with making payments, Please fill in the
+          following information and we will reach out to you for payment
+          arrangement. Thank you again.
+        </h4>
+        <!-- <h4 class="thank-you-text">
+          We appreciate your thoughtfulness in helping poor deserving students
+          of BIT Sindri. At this time, we are unable to automatically process
+          your payment. Please fill in the following information and we will
+          reach out to you for payment arrangement. Thank you again.
+        </h4> -->
+        <input type="text" id="name" placeholder="Your Name*" required />
+        <input type="email" id="email" placeholder="Email*" required />
+        <input type="text" id="phone" placeholder="Phone no.*" required />
+        <span style="padding: 0px 5px"
+          ><input type="checkbox" id="checkbox" name="whatsaap" />
+          <label for="whatsaap" style="color: #555"
+            >Do you receive WhatsApp messages on this number?
+          </label>
+        </span>
+        <input type="text" id="country" placeholder="Country code*" required />
+        <input type="text" id="amount" placeholder="Amount*" required />
+
+        <button class="donation">Send Message</button>
+      </form>
+    </div>
+    <script>
+      document.querySelector(".donation").addEventListener("click", (e) => {
+        e.preventDefault();
+        var params = {
+          from_name: document.getElementById("name"),
+          email_id: document.getElementById("email"),
+          phone_no: document.getElementById("phone"),
+          country_code: document.getElementById("country"),
+          amount: document.getElementById("amount"),
+        };
+        emailjs
+          .send("service_dxpql0h", "template_hg8zuzu", params)
+          .then(function (res) {
+            alert("Thank You, We'll contact you soon");
+            console.log(res);
+          });
+      });
+
+      const logo = document.querySelector(".logo");
+      logo.addEventListener("click", () => {
+        window.open("index.html", "_self");
+      });
+      const donate = document.querySelector(".donate");
+      donate.addEventListener("click", () => {
+        window.open("Donate.html", "_self");
+      });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

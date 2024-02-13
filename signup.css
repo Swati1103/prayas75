@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color:rgb(241, 239, 255);
+  font-family: 'Karla', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+.top-section{
+  background-color: white;
+  padding: 0px 20px;
+  /* display: flex; */
+  box-shadow: 0px 3px 20px rgb(231, 230, 230);
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold; 
+  
+}
+li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+ 
+}
+.logo{
+  width: 170px;
+  margin: 10px;
+  cursor: pointer;
+}
+.login{
+  
+  font-weight: bold;
+  font-size: medium;
+  padding: 8px 10px;
+  background-color: white;
+  border-radius: 20px;
+  border-style: solid;
+  border-color:rgb(52, 87, 244);
+  cursor: pointer;
+}
+.donate{
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  padding: 8px 12px;
+  background-color:rgb(52, 87, 244);
+  border-radius: 20px;
+  border-style: none;
+  cursor: pointer;
+}
+.donate:hover , .login:hover{
+  color:rgb(52, 87, 244);
+  background-color: rgb(225, 222, 222) ;
+}
+
+
+.content_box {
+  background-color: rgb(161, 189, 197);
+  height: 600px;
+  width: 800px;
+  border-radius: 56px;
+  left: 25%;
+  top: 100px;
+  background: transparent;
+  border: 2px solid #bdb5b5;
+  position: absolute;
+}
+.h1_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30px;
+  left: 38px;
+}
+.h1_div h1{
+  color:rgb(52, 87, 244);
+  font-size: 45px;
+}
+.h1_div::after{
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: #ffffff;
+  position: relative;
+  right: 60px;
+  top: 30px;
+}
+.form_element {
+  position: relative;
+  top: 80px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form_element form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.form_element label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form_element input {
+  padding: 20px;
+  margin-bottom: 22px;
+  border-radius: 2px;
+}
+.name_input {
+  height: 30px;
+  width: 500px;
+  position: relative;
+  right: 100px;
+}
+.name_input:hover {
+  box-shadow: 0 0 20px #bdb5b5;
+}
+.name_input::placeholder {
+  font-size: 15px;
+  font-family: Inter;
+  position: relative;
+  left: 10px;
+}
+.email_input {
+  height: 30px;
+  width: 500px;
+  position: relative;
+  right: 100px;
+  border: none;
+}
+.email_input:hover {
+  box-shadow: 0 0 20px #bdb5b5;
+  border: none;
+}
+.email_input::placeholder {
+  font-size: 15px;
+  font-family: Inter;
+  position: relative;
+  left: 10px;
+}
+.number_input {
+  height: 30px;
+  width: 500px;
+  position: relative;
+  right: 100px;
+  border: none;
+}
+.number_input:hover {
+  box-shadow: 0 0 20px #bdb5b5;
+  border: none;
+}
+.number_input::placeholder {
+  font-size: 15px;
+  font-family: Inter;
+  position: relative;
+  left: 10px;
+}
+.password_input {
+  height: 30px;
+  width: 500px;
+  position: relative;
+  right: 100px;
+  border: none;
+}
+.password_input:hover {
+  box-shadow: 0 0 20px #bdb5b5;
+  border: none;
+}
+.password_input::placeholder {
+  font-size: 15px;
+  font-family: Inter;
+  position: relative;
+  left: 10px;
+}
+#confirm_password{
+  position: relative;
+  margin-top: -15px;
+}
+#eye {
+  color: #000000;
+  position: relative;
+  left: 365px;
+  top: -50px;
+}
+#eye:hover {
+  cursor: pointer;
+}
+#hide_eye {
+  color: #000000;
+  position: relative;
+  left: 366px;
+  top: -51px;
+  display: none;
+  height: 17px;
+  width: 17px;
+}
+#hide_eye:hover {
+  cursor: pointer;
+}
+.button {
+  position: relative;
+  left: 150px;
+  top: 120px;
+}
+.button button {
+  height: 40px;
+  width: 500px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(52, 163, 194);
+  color: #000000;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: bolder;
+}
+.button button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(52, 163, 194);
+}
+.footer {
+  width: 250px;
+  position: relative;
+  top: 130px;
+  left: 250px;
+}
+.footer p {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: Inter;
+  position: relative;
+  left: 50px;
+  top: 20px;
+}
+.footer p a {
+  text-decoration: none;
+  color: #1a6f93;
+}

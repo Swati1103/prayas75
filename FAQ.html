@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayas 75</title>
+    <link rel="stylesheet" href="FAQ.css" />
+    <!-- goggle font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  </head>
+  <body>
+    <section class="top-section">
+      <div class="navbar">
+        <img src="logo.gif" alt="logo" class="logo" />
+        <ul>
+          <!-- <li><a class="Financial"  style="display: none;"  href="Financial.html" style="text-decoration: none; color: #000;">Financial</a></li> -->
+          <li>
+            <a
+              class="About"
+              href="AboutUs.html"
+              style="text-decoration: none; color: #000"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              class="FAQ"
+              href="FAQ.html"
+              style="text-decoration: none; color: #000"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              class="Contact-Us"
+              href="contactUs.html"
+              style="text-decoration: none; color: #000"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li><button class="login" id="login">Login</button></li>
+          <li><button class="donate">Donate</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="heading_text">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+
+    <div class="line"></div>
+    <div class="para">
+      <p>
+        Please reach out to us, if you cannot find satisfactory answer to your
+        question.
+      </p>
+    </div>
+
+    <div class="faq_section">
+      <div class="faq_item">
+        <div class="question">Who can benefit from Prayas75?</div>
+        <img src="down-arrow.png" alt="" id="arrow" />
+        <div class="answer">
+          Prayas75 is dedicated to providing aid and support to financially
+          weaker students of BIT Sindri located in Dhanbad, Jharkhand, India.
+        </div>
+      </div>
+      <hr style="width: 95%; margin-left: 15px; opacity: 0.5" id="hr" />
+
+      <div class="faq_item">
+        <div class="question">How does Prayas75 use donations?</div>
+        <img src="down-arrow.png" alt="" id="arrow" />
+        <div class="answer">
+          All donations made to Prayas75 go towards funding our
+          <span style="color: black; font-style: italic"
+            >Jubilee Batch Scholarship</span
+          >
+          program under which we distribute Rs. 20,000 (Approx $250) per year to
+          10 students of second, third and fourth year at BIT Sindri. There is
+          no administrative expenses as the core team of Prayas75 picks up that
+          cost personally.
+        </div>
+      </div>
+      <hr style="width: 95%; margin-left: 15px; opacity: 0.5" id="hr" />
+
+      <div class="faq_item">
+        <div class="question">
+          How do I donate to Prayas75 towards Jubilee Batch Scholarship?
+        </div>
+        <img src="down-arrow.png" alt="" id="arrow" />
+        <div class="answer">Please click "DONATE" button or "Contact Us".</div>
+      </div>
+      <hr style="width: 95%; margin-left: 15px; opacity: 0.5" id="hr" />
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      const logo = document.querySelector(".logo");
+      logo.addEventListener("click", () => {
+        window.open("index.html", "_self");
+      });
+      const donate = document.querySelector(".donate");
+      donate.addEventListener("click", () => {
+        window.open("Donate.html", "_self");
+      });
+    </script>
+  </body>
+  <script>
+    const faqItems = document.querySelectorAll(".faq_item");
+
+    faqItems.forEach(function (item) {
+      const arrows = item.querySelector("#arrow");
+      const answer = item.querySelector(".answer");
+
+      arrows.addEventListener("click", () => {
+        if (answer.style.display === "block") {
+          answer.style.display = "none";
+        } else {
+          answer.style.display = "block";
+        }
+      });
+    });
+  </script>
+</html>

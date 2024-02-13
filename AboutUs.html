@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="AboutUs.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+</head>
+<body>
+    <section class="top-section">
+        <div class="navbar">
+            <img src="logo.gif" alt="logo" class="logo">
+            <ul>
+                <!-- <li><a class="Financial"  style="display: none;" href="Financial.html" style="text-decoration: none; color: #000;">Financial</a></li> -->
+                <li><a class="About" href="AboutUs.html" style="text-decoration: none; color: #000;">About Us</a></li>
+                <li><a class="FAQ" href="FAQ.html" style="text-decoration: none; color: #000;">FAQ</a></li>
+                <li><a class="Contact-Us" href="contactUs.html" style="text-decoration: none; color: #000;">Contact Us</a></li>
+                </ul>
+                <ul>
+                <li><button class="login" id="login"> Login</button></li>
+                <li><button class="donate">Donate</button></li>
+            </ul>
+        </div>
+    </section>
+    <div class="heading">ABOUT US</div>
+    <div class="container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="missionbg.png" alt="missionbg">
+            </div>
+            <div class="content">
+                <h2>MISSION</h2>
+                <div class="underline"></div>
+                <p>Our mission is to provide aid and support to financially weaker students of BIT Sindri
+                    located in Dhanbad, Jharkhand, India.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="visionbg.png" alt="visionbg">
+            </div>
+            <div class="content">
+                <h2>VISION</h2>
+                <div class="underline"></div>
+                <p>Prayas75's vision is to uplift financially weaker students at BIT Sindri in Dhanbad, India, by providing essential aid and support.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="achievementbg.png" alt="achievementbg">
+            </div>
+            <div class="content">
+                <h2>ACHIEVEMENT</h2>
+                <div class="underline"></div>
+                <p>Ten students of BIT Sindri 2019 batch have completed their engineering curriculum with support from our initiative.</p>
+            </div>
+        </div>  
+    </div>
+
+    <section class="testimonials">
+        <div class="testimonial_heading">TESTIMONIALS</div>
+        <div class="testimonial">
+          <img src="WhatsApp Image 2024-01-11 at 5.57.17 PM.jpeg" alt="photu">
+          <p>"I am writing to express my heartfelt appreciation for the incredible impact the Prayas-75 Scholarship (Jubilee Batch Scholarship-2023) has had on my academic journey. 
+            Being a recipient of this scholarship has not only alleviated financial burdens but has also empowered me to pursue my educational goals with unwavering focus and determination.
+            The financial support provided by the aluminus of 1975 Batch has allowed me to dedicate more time to my studies and extracurricular activities, enhancing my overall college experience.
+            Finally, I want to extend my deepest gratitude to the contributor’s of Prayas-75 Batch Scholarship for investing in my education and for being a catalyst for positive change in the lives of students."</p>
+          <h3>Rohan Anand (Civil 2k19)</h3>
+        </div>
+        <div class="testimonial">
+          <img src="WhatsApp Image 2024-01-11 at 5.57.52 PM.jpeg" alt="photu">
+          <p>"I am immensely grateful for the scholarship awarded by Prayas 75. This scholarship has not only provided solution for financial strain of my education but has also inspired me. Our alumini in Prayas 75 have broadened my perspective and enhanced my understanding of the impact individuals and organizations can have on shaping the future. Thank you for making a significant difference in my academic journey and for being a crucial part of my educational success."</p>
+          <h3>Ankit Kumar (IT 2K19)</h3>
+        </div>
+      </section>
+      
+    <script src="app.js"></script>  
+    <script>
+        const logo = document.querySelector(".logo");
+        logo.addEventListener('click',()=>{
+            window.open("index.html","_self");
+        });
+        const donate = document.querySelector(".donate");
+            donate.addEventListener('click',()=>{
+                window.open("Donate.html","_self");
+            })
+    </script>
+</body>
+</html>
