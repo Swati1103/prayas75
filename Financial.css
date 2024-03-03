@@ -3,6 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1{
+  text-align: center;
+  font-size: 70px;
+  color: black;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
 body {
   font-family: 'Karla', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -248,4 +257,9 @@ table tbody tr:nth-child(odd) {
   .right_section_main_heading button {
     bottom: 20%;
   }
+}
+.Financial{
+  background-color:#e0e0e0;
+  border: 2px solid black;
+  padding: 5px;
 }

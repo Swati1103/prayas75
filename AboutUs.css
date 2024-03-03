@@ -124,18 +124,6 @@ li{
     line-height: 20px;
 }
 .card:hover{
-    .content h2{
-        color: #fff; 
-    }
-    .underline{
-        background-color: #fff; 
-    
-    }
-    .card img{
-        opacity: 0.5; 
-        transform: translateY(120deg);
-        color:rgb(52, 87, 244);
-    }
     background-color:rgb(52, 87, 244);
     box-shadow: 0 0 20px 0rgb(52, 87, 244);
     border: none;
@@ -143,7 +131,17 @@ li{
     transform: scale(1.1); 
     transition: 2ms ;
 }
-
+.card content h2:hover {
+        color: #fff; 
+}
+.card underline:hover {
+    background-color: #fff;
+}
+.card card img:hover {
+    opacity: 0.5; 
+        transform: translateY(120deg);
+        color:rgb(52, 87, 244); 
+}
 .testimonials {
     display: flex;
     flex-wrap: wrap;
@@ -235,3 +233,8 @@ li{
         color: white;
       }
 }
+.About{
+    background-color:#e0e0e0;
+    border: 2px solid black;
+    padding: 5px;
+  }
