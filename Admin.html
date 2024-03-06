@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayas 75</title>
+    <link rel="stylesheet" href="Admin.css" />
+    <!-- goggle font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+  </head>
+  <body>
+    <section class="top-section">
+      <div class="navbar">
+        <img src="logo.gif" alt="logo" class="logo" />
+        <ul>
+          <li>
+            <a
+              class="Admin"
+              href="Admin.html"
+              style="text-decoration: none; color: #000"
+              >Admin</a
+            >
+         </li>  
+          <li><a class="Financial" href="Financial.html" style="text-decoration: none; color: #000;">Financial</a></li>
+          <li><a class="Projects" href="projects.html" style="text-decoration: none; color: #000;">Projects</a></li>
+
+          <li>
+            <a
+              class="About"
+              href="AboutUs.html"
+              style="text-decoration: none; color: #000"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              class="FAQ"
+              href="FAQ.html"
+              style="text-decoration: none; color: #000"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              class="Contact-Us"
+              href="contactUs.html"
+              style="text-decoration: none; color: #000"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li><button class="login" id="login">Login</button></li>
+          <li><button class="donate">Donate</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="admin-menu">
+        <h2>Admin Menu</h2>
+        <ul>
+            <li><a href="ChangeUserLevel.html">Change User Level</a></li>
+            <li><a href="FinancialTransaction.html">Add a Financial Transaction</a></li>
+            <li><a href="GenerateReports.html">Generate Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <!-- home page wala footer copy krdena bhai -->
+    </div>
+    <script src="app.js"></script>
+    <script>
+      const logo = document.querySelector(".logo");
+      logo.addEventListener('click',()=>{
+          window.open("index.html","_self");
+      });
+      const donate = document.querySelector(".donate");
+            donate.addEventListener('click',()=>{
+                window.open("Donate.html","_self");
+            })
+  </script>
+
+    
+  </body>
+</html>

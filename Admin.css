@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* h1{
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+    margin-left: 80px;
+  } */
+  body {
+    font-family: 'Karla', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  .top-section{
+    background-color: white;
+    padding: 0px 20px;
+    /* display: flex; */
+    box-shadow: 0px 3px 20px rgb(204, 204, 204);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+  }
+  .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold; 
+    
+  }
+  li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+  }
+  .logo{
+    width: 170px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .login{
+    
+    font-weight: bold;
+    font-size: medium;
+    padding: 8px 10px;
+    background-color: white;
+    border-radius: 20px;
+    border-style: solid;
+    border-color:rgb(52, 87, 244);
+    
+  }
+  .donate{
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    padding: 8px 12px;
+    background-color:rgb(52, 87, 244);
+    border-radius: 20px;
+    border-style: none;
+  }
+  .donate:hover , .login:hover{
+    color:rgb(52, 87, 244);
+    background-color: rgb(225, 222, 222) ;
+  }
+  
+  
+  .main {
+    height: 500px;
+    width: 90%;
+    margin-left: 100px;
+    border-radius: 30px;
+    margin-top: 0px;
+  }
+  .left_section_main {
+    height: 90%;
+    width: 40%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+    top: 20px;
+    left: 50px;
+  }
+  .left_section_main_heading {
+    font-family: "Italiana", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: normal;
+    text-decoration: none;
+    color:rgb(52, 87, 244);
+    position: relative;
+    top: 100px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left_section_main_heading h1 {
+    position: relative;
+    left: 15px;
+    top: 20px;
+  }
+  .main_partition_line {
+    height: 280px;
+    width: 2px;
+    background-color:rgb(52, 87, 244);
+    position: relative;
+    top: 135px;
+    left: 45%;
+    opacity: 0.3;
+  }
+  .right_section_main_heading {
+    width: 90%;
+    position: relative;
+    bottom: 130px;
+    left: 120px;
+  }
+  .right_section_main_heading h2 {
+    color: #5e5454;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .right_section_main_heading button {
+    width: 200px;
+    background-color:rgb(52, 87, 244);
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bolder;
+    position: relative;
+    top: 35px;
+    left: 5px;
+    cursor: pointer;
+  }
+  .right_section_main_heading button:hover {
+    box-shadow: 0 0 10pxrgb(52, 87, 244);
+  }
+  .container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  h2 {
+    color:rgb(52, 87, 244);
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+  }
+  
+  .table th {
+    background-color:rgb(52, 87, 244);
+    color: #fff;
+  }
+  
+  table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+  }
+  @media only screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+    .navbar {
+      max-width: 100%;
+    }
+  
+    .logo {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+  
+    .nav-items {
+      margin-right: 20px;
+    }
+  
+    .nav-items ul {
+      margin-right: -50px;
+      padding: 20px;
+    }
+  
+    .nav-items ul a {
+      margin: 5px 0;
+      padding: 20px;
+    }
+  
+    .container {
+      width: 90%;
+    }
+    .table th,
+    .table td {
+      padding: 8px;
+    }
+    .main {
+      margin-left: 0;
+    }
+    .main_partition_line {
+      right: 40%;
+    }
+    .left_section_main_heading {
+      position: absolute;
+      left: -15%;
+      bottom: 50%;
+    }
+    .left_section_main_heading h1 {
+      font-size: 50px;
+      width: 40%;
+    }
+    .main_partition_line {
+      position: relative;
+      top: 22%;
+      left: 50%;
+      height: 250px;
+    }
+    .right_section_main_heading {
+      width: 90%;
+      bottom: 27%;
+      left: 15%;
+    }
+    .right_section_main_heading p {
+      font-size: 12px;
+      right: 80%;
+    }
+    .right_section_main_heading button {
+      bottom: 20%;
+    }
+  }
+  .Admin{
+    background-color:#e0e0e0;
+    border: 2px solid black;
+    padding: 5px;
+  }
