@@ -170,11 +170,101 @@
         padding: 10px;
         border-radius: 5px;
         width: 400px;
-        transition: padding 0.2s ease; 
+        transition: padding 0.2s ease;
       }
-
+.a{
+  font-weight: bold;
+}
       p:hover {
         padding: 12px;
+      }
+      .links2 {
+        display: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        body {
+          overflow-x: hidden;
+        }
+        .navbar {
+          max-width: 100%;
+        }
+
+        .logo {
+          font-size: 18px;
+          margin-left: 10px;
+        }
+
+        .nav-items {
+          margin-right: 20px;
+        }
+
+        .nav-items ul {
+          margin-right: -50px;
+          padding: 20px;
+        }
+
+        .nav-items ul a {
+          margin: 5px 0;
+          padding: 20px;
+        }
+
+        .container {
+          width: 90%;
+        }
+        .table th,
+        .table td {
+          padding: 8px;
+        }
+        .main {
+          margin-left: 0;
+        }
+        .main_partition_line {
+          right: 40%;
+        }
+        .left_section_main_heading {
+          position: absolute;
+          left: -15%;
+          bottom: 50%;
+        }
+        .left_section_main_heading h1 {
+          font-size: 50px;
+          width: 40%;
+        }
+        .main_partition_line {
+          position: relative;
+          top: 22%;
+          left: 50%;
+          height: 250px;
+        }
+        .right_section_main_heading {
+          width: 90%;
+          bottom: 27%;
+          left: 15%;
+        }
+        .right_section_main_heading p {
+          font-size: 12px;
+          right: 80%;
+        }
+        .right_section_main_heading button {
+          bottom: 20%;
+        }
+        .links {
+          display: none;
+        }
+
+        .links2 {
+          padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+          width: 100vw;
+          display: flex;
+          justify-content: space-between;
+          gap: 0px;
+          margin-left: -15px;
+          font-weight: bold;
+        }
+        .links2 li {
+          margin: 5px;
+        }
       }
     </style>
   </head>
@@ -182,8 +272,32 @@
     <section class="top-section">
       <div class="navbar">
         <img src="logo.gif" alt="logo" class="logo" />
-        <ul>
-          <!-- <li><a class="Financial"  style="display: none;" href="Financial.html" style="text-decoration: none; color: #000;">Financial</a></li> -->
+        <ul class="links">
+          <li>
+            <a
+              class="Admin"
+              href="Admin.html"
+              style="text-decoration: none; color: #000"
+              >Admin</a
+            >
+          </li>
+          <li>
+            <a
+              class="Financial"
+              href="Financial.html"
+              style="text-decoration: none; color: #000"
+              >Financial</a
+            >
+          </li>
+          <li>
+            <a
+              class="Projects"
+              href="projects.html"
+              style="text-decoration: none;color : #000"
+              >Projects</a
+            >
+          </li>
+
           <li>
             <a
               class="About"
@@ -214,6 +328,54 @@
           <li><button class="donate">Donate</button></li>
         </ul>
       </div>
+      <ul class="links2">
+        <li id="admin">
+          <a
+            class="Admin"
+            href="Admin.html"
+            style="text-decoration: none; color: #000"
+            >Admin</a
+          >
+        </li>
+        <li>
+          <a
+            class="Financial"
+            href="Financial.html"
+            style="text-decoration: none; color: #000"
+            >Financial</a
+          >
+        </li>
+        <li>
+          <a class="Projects" href="projects.html" style="text-decoration: none; color : #000"
+            >Projects</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="About"
+            href="AboutUs.html"
+            style="text-decoration: none; color: #000"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            class="FAQ"
+            href="FAQ.html"
+            style="text-decoration: none; color: #000"
+            >FAQ</a
+          >
+        </li>
+        <li>
+          <a
+            class="Contact-Us"
+            href="contactUs.html"
+            style="text-decoration: none; color: #000"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
     </section>
     <!-- account deatils -->
     <div class="container">

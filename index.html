@@ -1,94 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prayas 75</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css" />
     <!-- goggle font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <section class="top-section">
-        <div class="navbar">
-            <img src="logo.gif" alt="logo" class="logo">
-            <ul>
-                <li><a class="Admin" href="Admin.html" style="text-decoration: none; color: #000;">Admin</a></li>
-                <li><a class="Financial" href="Financial.html" style="text-decoration: none; color: #000;">Financial</a></li>
-                <li><a class="Projects" href="projects.html" style="text-decoration: none; color: #000;">Projects</a></li>
-                <li><a class="About" href="AboutUs.html" style="text-decoration: none; color: #000;">About Us</a></li>
-                <li><a class="FAQ" href="FAQ.html" style="text-decoration: none; color: #000;">FAQ</a></li>
-                <li><a class="Contact-Us" href="contactUs.html" style="text-decoration: none; color: #000;">Contact Us</a></li>
-            </ul>
-            <ul>
-                <li><button class="login" id="login">login</button></li>
-                <li><button class="donate">Donate</button></li>
-            </ul>
-        </div>
-    </section>
-        <!-- Middle Section  -->
-        <main class="middle-section">
+      <div class="navbar">
+        <img src="logo.gif" alt="logo" class="logo" />
+        <ul class="links">
+          <li>
+            <a
+              class="Admin"
+              href="Admin.html"
+              style="text-decoration: none; color: #000"
+              >Admin</a
+            >
+          </li>
+          <li>
+            <a
+              class="Financial"
+              href="Financial.html"
+              style="text-decoration: none; color: #000"
+              >Financial</a
+            >
+          </li>
+          <li>
+            <a
+              class="Projects"
+              href="projects.html"
+              style="text-decoration: none; color: #000"
+              >Projects</a
+            >
+          </li>
 
-            <div class="container">
-                <div class="text-container">
-                    <div class="bold-text-container">
-                        <p class="bold-text">Get <span style="color:  rgb(52, 87, 244);">Full</span> <br><span style="color:  rgb(52, 87, 244);">Scholarship </span><br>With Us</p>
-                        <p class="text-description">Get your scholarship* from Prayas 75
-                            to cover <br>complete college tuition fees and 
-                            be a part <br>of advancing education around the world. <br><span class="conditions-apply"> Conditions Apply*</span></p>
-                     </div>
-    
-                </div>
-                <div class="image-container">
-                    <img src="featured photo.png" alt="photo" class="scholarship-photo">
-                </div>
-            </div>
-    
-            <div class="middle-description">
-                <h1 class="description-heading">Who are we ?</h1>
-                <p class="description-answer">Prayas75 is a small group of like-minded members of 1975-1979 batch of BIT Sindri. The main charter of Prayas75 is to help engineering students currently studying at BIT Sindri via few initiatives such as scholarship, project mentorship and webinars. The members of Prayas75 are from diverse background. The membership is currently only open to engineers who studied at BIT during 1975-1979.</p>
-            
-            <h1 class="description-heading">What we provide ?</h1>
-            <h2 class="jubilee">Jubilee Batch Scholarship</h2>
-            <p class="description-answer">Jubilee Batch Scholarship is awarded to ten second-year students, one from each department of engineering at BIT Sindri, who can provide evidence of severe financial hardships yet maintaining noteworthy academic performance in the first year (does not need to be in the top few). The selection is made either by each head of departments, or by Prayas75 selection committee. Each candidate is video interviewed before final award to ensure that they really need the support due to financial hardships and they are sincerely pursuing engineering with clean disciplinary record. The scholarship beneficiaries receive total of Rs 60,000 distributed in three years (second, third and the fourth years) as long as they are able to sustain their academic performance.
+          <li>
+            <a
+              class="About"
+              href="AboutUs.html"
+              style="text-decoration: none; color: #000"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a class="FAQ" href="FAQ.html" style="text-decoration: none">FAQ</a>
+          </li>
+          <li>
+            <a
+              class="Contact-Us"
+              href="contactUs.html"
+              style="text-decoration: none; color: #000"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li><button class="login" id="login">Login</button></li>
+          <li><button class="donate">Donate</button></li>
+        </ul>
+      </div>
+      <ul class="links2">
+        <li id="admin">
+          <a
+            class="Admin"
+            href="Admin.html"
+            style="text-decoration: none; color: #000"
+            >Admin</a
+          >
+        </li>
+        <li>
+          <a
+            class="Financial"
+            href="Financial.html"
+            style="text-decoration: none; color: #000"
+            >Financial</a
+          >
+        </li>
+        <li>
+          <a
+            class="Projects"
+            href="projects.html"
+            style="text-decoration: none; color: #000"
+            >Projects</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="About"
+            href="AboutUs.html"
+            style="text-decoration: none; color: #000"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a class="FAQ" href="FAQ.html" style="text-decoration: none">FAQ</a>
+        </li>
+        <li>
+          <a
+            class="Contact-Us"
+            href="contactUs.html"
+            style="text-decoration: none; color: #000"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <!-- Middle Section  -->
+    <main class="middle-section">
+      <div class="container">
+        <div class="text-container">
+          <div class="bold-text-container">
+            <p class="bold-text">
+              Get <span style="color: rgb(52, 87, 244)">Full</span> <br /><span
+                style="color: rgb(52, 87, 244)"
+                >Scholarship </span
+              ><br />With Us
             </p>
+            <p class="text-description">
+              Get your scholarship* from Prayas 75 to cover <br />complete
+              college tuition fees and be a part <br />of advancing education
+              around the world. <br /><span class="conditions-apply">
+                Conditions Apply*</span
+              >
+            </p>
+          </div>
         </div>
-        </main>
-        <section class="bottom-section">
-            <div style="flex: 1;">
-                <p class="bottom-headings">Follow us on Social Media</p>
-                <div class="icons">
-                    <img src="instagram.png" alt="instagram" class="instagram">
-                    <img src="facebook.png" alt="facebook" class="facebook">
-                    <img src="twitter.png" alt="twitter" class="twitter">
-                </div>
-                <p class="bottom-headings">Subscribe</p>
-                <p class="subscribe-description">Subscribe to be the first one to get updated about our soft launch events</p>
-                <form class="subscription">
-                    <input type="email" placeholder="Enter your email" class="textbox">
-                    <button class="subscribe">Subscribe</button>
-                </form>
-            </div>
-            <div style="flex: 1;display: flex; justify-content: center; align-items: center;">
-                <img src="paper aeroplane.png" alt="" style="width: 60%;">
-            </div>
-        </section>
-        <div style="text-align: center;">
-            <p class="copyright">Copyright© 2023 Prayas75 - All Rights Reserved</p>
-         </div>
-        <script>
-            const logo = document.querySelector(".logo");
-            logo.addEventListener('click',()=>{
-                window.open("index.html","_self");
-            })
-            const donate = document.querySelector(".donate");
-            donate.addEventListener('click',()=>{
-                window.open("Donate.html","_self");
-            })
-        </script>
-        <script src="app.js"></script>
-</body>
+        <div class="image-container">
+          <img src="featured photo.png" alt="photo" class="scholarship-photo" />
+        </div>
+      </div>
+
+      <div class="middle-description">
+        <h1 class="description-heading">Who are we ?</h1>
+        <p class="description-answer">
+          Prayas75 is a small group of like-minded members of 1975-1979 batch of
+          BIT Sindri. The main charter of Prayas75 is to help engineering
+          students currently studying at BIT Sindri via few initiatives such as
+          scholarship, project mentorship and webinars. The members of Prayas75
+          are from diverse background. The membership is currently only open to
+          engineers who studied at BIT during 1975-1979.
+        </p>
+
+        <h1 class="description-heading">What we provide ?</h1>
+        <h2 class="jubilee">Jubilee Batch Scholarship</h2>
+        <p class="description-answer">
+          Jubilee Batch Scholarship is awarded to ten second-year students, one
+          from each department of engineering at BIT Sindri, who can provide
+          evidence of severe financial hardships yet maintaining noteworthy
+          academic performance in the first year (does not need to be in the top
+          few). The selection is made either by each head of departments, or by
+          Prayas75 selection committee. Each candidate is video interviewed
+          before final award to ensure that they really need the support due to
+          financial hardships and they are sincerely pursuing engineering with
+          clean disciplinary record. The scholarship beneficiaries receive total
+          of Rs 60,000 distributed in three years (second, third and the fourth
+          years) as long as they are able to sustain their academic performance.
+        </p>
+      </div>
+    </main>
+    <section class="bottom-section">
+      <div style="flex: 1">
+        <p class="bottom-headings">Follow us on Social Media</p>
+        <div class="icons">
+          <img src="instagram.png" alt="instagram" class="instagram" />
+          <img src="facebook.png" alt="facebook" class="facebook" />
+          <img src="twitter.png" alt="twitter" class="twitter" />
+        </div>
+        <p class="bottom-headings">Subscribe</p>
+        <p class="subscribe-description">
+          Subscribe to be the first one to get updated about our soft launch
+          events
+        </p>
+        <form class="subscription">
+          <input type="email" placeholder="Enter your email" class="textbox" />
+          <button class="subscribe">Subscribe</button>
+        </form>
+      </div>
+      <div
+        style="
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <img src="paper aeroplane.png" alt="" style="width: 60%" />
+      </div>
+    </section>
+    <div style="text-align: center">
+      <p class="copyright">Copyright© 2023 Prayas75 - All Rights Reserved</p>
+    </div>
+    <script>
+      const logo = document.querySelector(".logo");
+      logo.addEventListener("click", () => {
+        window.open("index.html", "_self");
+      });
+      const donate = document.querySelector(".donate");
+      donate.addEventListener("click", () => {
+        window.open("Donate.html", "_self");
+      });
+    </script>
+    <script src="app.js"></script>
+  </body>
 </html>
