@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+#all-transactions{
+
+}
 h1 {
   text-align: center;
   font-size: 70px;
@@ -210,17 +213,39 @@ h1 {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
+  margin-left: 6rem;
+  margin-top: 2rem;
 }
 
 .report-buttons button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
+  padding: 10px 30px;
+  border: 1px solid rgb(250, 246, 246);
+  box-shadow: 0px 0px 2px 2px rgb(17, 71, 78);
+  color:white;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+  background-color: rgb(18, 95, 95);
+  border-radius: 20px;
+}
+
+.report-buttons button:hover {
+  background-color: #7275796e;
+  color:black;
+  border-color: rgb(37, 107, 117);
+  box-shadow: 0px 0px 0px 0px rgb(37, 107, 117);
+  outline-style: solid;
+  transition: ease-in-out;
+  transform: scale(1.1);
 }
 
 .report-buttons button.active {
-  background-color: #eee;
+  background-color: rgb(18, 95, 95);
+  
+}
+
+.report-buttons button.active:hover {
+  background-color: #7275796e;
 }
 
 .currency-switcher {
