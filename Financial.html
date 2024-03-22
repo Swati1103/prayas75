@@ -1,82 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Financial.css">
-        <!-- goggle font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
-        <style>
-            body {
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Financial.css" />
+    <!-- goggle font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <style>
+      /* body {
               background-image: url('https://blog.depositphotos.com/wp-content/uploads/2017/07/Soothing-nature-backgrounds-2-1536x1025.jpg');
               background-repeat: no-repeat;
               background-attachment: fixed;
               background-size: cover;
-            }
-            </style>
+            } */
+    </style>
     <title>Prayas 75</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="top-section">
-        <div class="navbar">
-          <img src="logo.gif" alt="logo" class="logo" />
-          <ul class="links">
-            <li>
-              <a
-                class="Admin"
-                href="Admin.html"
-                style="text-decoration: none; color: #000"
-                >Admin</a
-              >
-           </li>  
-            <li><a class="Financial" href="Financial.html" style="text-decoration: none;">Financial</a></li>
-            <li><a class="Projects" href="projects.html" style="text-decoration: none; color: #000;">Projects</a></li>
-  
-            <li>
-              <a
-                class="About"
-                href="AboutUs.html"
-                style="text-decoration: none; color: #000"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a
-                class="FAQ"
-                href="FAQ.html"
-                style="text-decoration: none; color: #000"
-                >FAQ</a
-              >
-            </li>
-            <li>
-              <a
-                class="Contact-Us"
-                href="contactUs.html"
-                style="text-decoration: none; color: #000"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-          <ul>
-            <li><button class="login" id="login">Login</button></li>
-            <li><button class="donate">Donate</button></li>
-          </ul>
-        </div>
-        <ul class="links2">
-          <li id = "admin">
+      <div class="navbar">
+        <img src="logo.gif" alt="logo" class="logo" />
+        <ul class="links">
+          <li>
             <a
               class="Admin"
               href="Admin.html"
               style="text-decoration: none; color: #000"
               >Admin</a
             >
-         </li>  
-          <li><a class="Financial" href="Financial.html" style="text-decoration: none; ">Financial</a></li>
-          <li><a class="Projects" href="projects.html" style="text-decoration: none; color: #000;">Projects</a></li>
-  
+          </li>
+          <li>
+            <a
+              class="Financial"
+              href="Financial.html"
+              style="text-decoration: none"
+              >Financial</a
+            >
+          </li>
+          <li>
+            <a
+              class="Projects"
+              href="projects.html"
+              style="text-decoration: none; color: #000"
+              >Projects</a
+            >
+          </li>
+
           <li>
             <a
               class="About"
@@ -102,28 +77,334 @@
             >
           </li>
         </ul>
-      </section>
-    
+        <ul>
+          <li><button class="login" id="login">Login</button></li>
+          <li><button class="donate">Donate</button></li>
+        </ul>
+      </div>
+      <ul class="links2">
+        <li id="admin">
+          <a
+            class="Admin"
+            href="Admin.html"
+            style="text-decoration: none; color: #000"
+            >Admin</a
+          >
+        </li>
+        <li>
+          <a
+            class="Financial"
+            href="Financial.html"
+            style="text-decoration: none"
+            >Financial</a
+          >
+        </li>
+        <li>
+          <a
+            class="Projects"
+            href="projects.html"
+            style="text-decoration: none; color: #000"
+            >Projects</a
+          >
+        </li>
+
+        <li>
+          <a
+            class="About"
+            href="AboutUs.html"
+            style="text-decoration: none; color: #000"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            class="FAQ"
+            href="FAQ.html"
+            style="text-decoration: none; color: #000"
+            >FAQ</a
+          >
+        </li>
+        <li>
+          <a
+            class="Contact-Us"
+            href="contactUs.html"
+            style="text-decoration: none; color: #000"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </section>
 
     <!-- Financial Details -->
-    <h1>Launching Soon</h1>
+    <!-- <h1>Launching Soon</h1> -->
 
-    
+    <div class="report-buttons">
+      <button id="all-transactions" class="active">All Transactions</button>
+      <button id="contributions">Contributions</button>
+      <button id="disbursements">Disbursements</button>
+      <button id="expenses">Expenses</button>
+    </div>
+    <div class="currency-switcher">
+      <span>Currency: </span>
+      <select id="currency">
+        <option value="usd">USD</option>
+        <option value="inr">Rs</option>
+      </select>
+    </div>
+    <div id="report-results"></div>
 
+<div class="container" id="batch1">
+</div>
+    <!-- <div class="container">
+      <h2>Jubilee Batch Scholarship (2019-2023)</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Name of Student</th>
+            <th>Roll No.</th>
+            <th>Branch</th>
+            <th>2nd year</th>
+            <th>3rd year</th>
+            <th>4th year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Subham Kumar</td>
+            <td>1904090</td>
+            <td>Chemical</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Rohan Anand</td>
+            <td>1905075</td>
+            <td>Civil</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Jayesh Kumar</td>
+            <td>1909018</td>
+            <td>Computer Science</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Kumar Shashwat</td>
+            <td>1906023</td>
+            <td>Electronics and Communication</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Suraj Kumar</td>
+            <td>1901098</td>
+            <td>Electrical</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Ankit Kumar</td>
+            <td>1911009</td>
+            <td>Information Technology</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Shubham Kumar Gupta</td>
+            <td>1900116</td>
+            <td>Mechanical</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Amit Kumar Sharma</td>
+            <td>1903006</td>
+            <td>Metallurgy</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Vishal Kumar Pathak</td>
+            <td>1906023</td>
+            <td>Mining</td>
+            <td>Ineligible</td>
+            <td>Rs 20,000</td>
+            <td>Ineligible</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Raghunandan Singh</td>
+            <td>2002004D</td>
+            <td>Production</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+            <td>Rs 20,000</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Mohammad Mehran</td>
+            <td>1908050</td>
+            <td>Mining</td>
+            <td>Rs 20,000</td>
+            <td>Ineligible</td>
+            <td>Ineligible</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Deepak Kumar Koda</td>
+            <td>1801034</td>
+            <td>Electrical</td>
+            <td>Ineligible</td>
+            <td>Rs 20,000</td>
+            <td>N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container">
+      <h2>Jubilee Batch Scholarship (2020-2024)</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Name of Student</th>
+            <th>Roll No.</th>
+            <th>Branch</th>
+            <th>2nd year</th>
+            <th>3rd year</th>
+            <th>4th year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ashutosh Kumar Pandey</td>
+            <td>2004023</td>
+            <td>Chemical</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Ankur Kumar</td>
+            <td>2005027</td>
+            <td>Civil</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Aayush Anshu</td>
+            <td>2009001</td>
+            <td>Computer Science</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Harsh Kumar</td>
+            <td>2001114</td>
+            <td>Electrical</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Aman Kumar</td>
+            <td>2006009</td>
+            <td>Electronics and Communication</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Navneet Sinha</td>
+            <td>2111007D</td>
+            <td>Information Technology</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Shubham Barnawal</td>
+            <td>2000126</td>
+            <td>Mechanical</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Akash kumar</td>
+            <td>2103001D</td>
+            <td>Metallurgy</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Raj Kumar</td>
+            <td>2008039</td>
+            <td>Mining</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Shashikant</td>
+            <td>2102017D</td>
+            <td>Production</td>
+            <td>Rs 20,000</td>
+            <td>TBD</td>
+            <td>TBD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+   
     <!-- footer -->
     <div class="footer">
-        <!-- home page wala footer copy krdena bhai -->
+      <!-- home page wala footer copy krdena bhai -->
     </div>
-    <script src="app.js"></script>
+    <script src="Financial.js"></script>
     <script>
       const logo = document.querySelector(".logo");
-      logo.addEventListener('click',()=>{
-          window.open("index.html","_self");
+      logo.addEventListener("click", () => {
+        window.open("index.html", "_self");
       });
       const donate = document.querySelector(".donate");
-            donate.addEventListener('click',()=>{
-                window.open("Donate.html","_self");
-            })
-  </script>
-</body>
+      donate.addEventListener("click", () => {
+        window.open("Donate.html", "_self");
+      });
+    </script>
+  </body>
 </html>

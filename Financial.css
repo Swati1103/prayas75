@@ -198,6 +198,39 @@ table tbody tr:nth-child(odd) {
   color: white;
   border-radius: 20%;
 }
+financials-container {
+  margin: 10px;
+}
+
+h1 {
+  /* Style the page title */
+}
+
+.report-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.report-buttons button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.report-buttons button.active {
+  background-color: #eee;
+}
+
+.currency-switcher {
+  margin-bottom: 1rem;
+}
+
+#report-results {
+  /* Style the report output area */
+  font-family: monospace; /* Use monospaced font for consistent formatting */
+}
 
 @media only screen and (max-width: 768px) {
   body {
