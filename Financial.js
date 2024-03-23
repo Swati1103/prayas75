@@ -347,8 +347,14 @@ function showAllTransactions() {
   content.appendChild(remainingTable.table);
 }
 
-// Assuming a button with ID "all-transactions" triggers the report generation
-allTransactionsBtn.addEventListener("click", showAllTransactions);
+function showNoDataFound() {
+  content.innerHTML = "";
+  const heading = document.createElement("h2");
+  heading.textContent = "No Data Found";
+  content.appendChild(heading);
+}
 
-// (Optional) Add event listeners for other buttons or UI elements
-// to handle different report functionalities
+allTransactionsBtn.addEventListener("click", showAllTransactions);
+contributionsBtn.addEventListener("click", showNoDataFound);
+disbursementsBtn.addEventListener("click", showNoDataFound);
+expensesBtn.addEventListener("click", showNoDataFound);
