@@ -266,6 +266,9 @@ const transactionsData = [
     fyr: "TBD",
   },
 ];
+
+
+// Adjust these values based on your actual data structure:
 const batch1Size = 12; // Number of elements in the 1st table (Jubilee Batch Scholarship 2019-2023)
 const batch2Size = 10;  // Number of elements in the 2nd table (Jubilee Batch Scholarship 2020-2024)
 
@@ -307,9 +310,9 @@ function showAllTransactions() {
         student.name,
         student.rollno,
         student.branch,
-        student.syr,
-        student.tyr,
-        student.fyr,
+        formatCurrency(student.syr),
+        formatCurrency(student.tyr),
+        formatCurrency(student.fyr),
       ];
 
       for (const data of tableDataCells) {
@@ -324,6 +327,17 @@ function showAllTransactions() {
     table.appendChild(tableBody);
 
     return { heading, table };
+  }
+
+  function formatCurrency(amount) {
+    const selectedCurrency = currencySelect.value;
+    if (selectedCurrency === "usd" && amount !== "TBD" && amount !== "N/A" && amount != "Ineligible") {
+      return `$ ${(amount/80).toLocaleString()}`; // Format to USD with commas
+    } else if (selectedCurrency === "inr" && amount !== "TBD" && amount !== "N/A" && amount != "Ineligible") {
+      return `₹ ${amount}`; // Display Rupee symbol
+    } else {
+      return amount; // Default (no formatting)
+    }
   }
 
   // Create tables for each batch based on data index
@@ -358,3 +372,4 @@ allTransactionsBtn.addEventListener("click", showAllTransactions);
 contributionsBtn.addEventListener("click", showNoDataFound);
 disbursementsBtn.addEventListener("click", showNoDataFound);
 expensesBtn.addEventListener("click", showNoDataFound);
+currencySelect.addEventListener("change", showAllTransactions)
