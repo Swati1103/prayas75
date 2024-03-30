@@ -5,7 +5,6 @@ const expensesBtn = document.getElementById("expenses");
 const currencySelect = document.getElementById("currency");
 const reportResults = document.getElementById("report-results");
 const content = document.getElementById("batch1");
-
 const transactionsData = [
   {
     name: "Subham Kumar",
@@ -266,15 +265,269 @@ const transactionsData = [
     fyr: "TBD",
   },
 ];
+const contributorData = [
+  {
+    sectionName: "Founding Members",
+    members: [
+      {
+        date: "XX/XX/XXXX",
+        name: "ANANT BHATT",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "AJIT KUMAR",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "ANIL KUMAR",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "MADHURESH NAGSHAIN",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "MURARI PRASAD",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "PANDEY BRIJ BHUSHAN PRASAD",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RAJIV TEWARY",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RAJAT KANTI ROY",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RAJEEV RANJAN",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RANJIT VARMA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "SUJIT MITRA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "VIJAY KUMAR PRADHAN",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+    ],
+  },
+  {
+    sectionName: "Additional Members",
+    members: [
+      {
+        date: "XX/XX/XXXX",
+        name: "ABHAY K.VERMA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "BAIJU P GUPTA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "BIPIN BIHARI VERMA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "BINOD KUMAR JHA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "DEBMALYA GHOSH",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "INDRADEO NARAYAN SINHA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "MANOHAR SINGH SAINI",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "MUKTESHWAR CH.",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "MUKUND BHATTA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "NARENDRA NARAYAN MISHRA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "NIRMAL KUMAR",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "PRAKASH BIHARI DAS",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "PRABHAT JHA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "PRADIP KUMAR",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RADHE SHYAM MISHRA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RAM BILAS SINGH",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RAK KRIPAL SINGH",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "RANG NATH JHA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "SHAMBHU DAS",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "SHYAM NANDAN MISHRA",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "SHYAM SUNDER YADAV",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "UMASHANKAR YADAV",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+      {
+        date: "XX/XX/XXXX",
+        name: "YOGENDRA TIWARY",
+        contributedAmount: 0,
+        debitAmount: 0,
+        totalAmount: 0,
+      },
+    ],
+  },
+];
 
-
-// Adjust these values based on your actual data structure:
 const batch1Size = 12; // Number of elements in the 1st table (Jubilee Batch Scholarship 2019-2023)
-const batch2Size = 10;  // Number of elements in the 2nd table (Jubilee Batch Scholarship 2020-2024)
+const batch2Size = 10; // Number of elements in the 2nd table (Jubilee Batch Scholarship 2020-2024)
 
 function showAllTransactions() {
   content.innerHTML = "";
-
   function createTable(data, headingText) {
     // Create the heading element
     const heading = document.createElement("h2");
@@ -287,7 +540,15 @@ function showAllTransactions() {
     const tableRow = document.createElement("tr");
 
     // Create table headers
-    const headers = ["S.No", "Name of Student", "Roll No.", "Branch", "2nd Year", "3rd Year", "4th Year"];
+    const headers = [
+      "S.No",
+      "Name of Student",
+      "Roll No.",
+      "Branch",
+      "2nd Year",
+      "3rd Year",
+      "4th Year",
+    ];
     for (const header of headers) {
       const tableHeaderCell = document.createElement("th");
       tableHeaderCell.textContent = header;
@@ -331,9 +592,19 @@ function showAllTransactions() {
 
   function formatCurrency(amount) {
     const selectedCurrency = currencySelect.value;
-    if (selectedCurrency === "usd" && amount !== "TBD" && amount !== "N/A" && amount != "Ineligible") {
-      return `$ ${(amount/80).toLocaleString()}`; // Format to USD with commas
-    } else if (selectedCurrency === "inr" && amount !== "TBD" && amount !== "N/A" && amount != "Ineligible") {
+    if (
+      selectedCurrency === "usd" &&
+      amount !== "TBD" &&
+      amount !== "N/A" &&
+      amount != "Ineligible"
+    ) {
+      return `$ ${(amount / 80).toLocaleString()}`; // Format to USD with commas
+    } else if (
+      selectedCurrency === "inr" &&
+      amount !== "TBD" &&
+      amount !== "N/A" &&
+      amount != "Ineligible"
+    ) {
       return `₹ ${amount}`; // Display Rupee symbol
     } else {
       return amount; // Default (no formatting)
@@ -342,13 +613,25 @@ function showAllTransactions() {
 
   // Create tables for each batch based on data index
   const batch1Data = transactionsData.slice(0, batch1Size);
-  const batch1Table = createTable(batch1Data, "Jubilee Batch Scholarship (2019-2023)");
+  const batch1Table = createTable(
+    batch1Data,
+    "Jubilee Batch Scholarship (2019-2023)"
+  );
 
-  const batch2Data = transactionsData.slice(batch1Size, batch1Size + batch2Size);
-  const batch2Table = createTable(batch2Data, "Jubilee Batch Scholarship (2020-2024)");
+  const batch2Data = transactionsData.slice(
+    batch1Size,
+    batch1Size + batch2Size
+  );
+  const batch2Table = createTable(
+    batch2Data,
+    "Jubilee Batch Scholarship (2020-2024)"
+  );
 
   const remainingData = transactionsData.slice(batch1Size + batch2Size);
-  const remainingTable = createTable(remainingData, "Jubilee Batch Scholarship (2021-2025)");
+  const remainingTable = createTable(
+    remainingData,
+    "Jubilee Batch Scholarship (2021-2025)"
+  );
 
   // Append headings and tables to the content element
   content.appendChild(batch1Table.heading);
@@ -361,6 +644,76 @@ function showAllTransactions() {
   content.appendChild(remainingTable.table);
 }
 
+//  Contribution Button
+function showContributions() {
+  content.innerHTML = "";
+
+  function createTable(data, headingText) {
+    // Create the heading element
+    const heading = document.createElement("h2");
+    heading.textContent = headingText;
+
+    // Create a table element
+    const table = document.createElement("table");
+    table.classList.add("table");
+    const tableHead = document.createElement("thead");
+    const tableRow = document.createElement("tr");
+
+    // Create table headers with S.No
+    const headers = ["S.No", "Date", "Name", "Contributed Amount", "Debit Amount", "Total Amount"];
+    for (const header of headers) {
+      const tableHeaderCell = document.createElement("th");
+      tableHeaderCell.textContent = header;
+      tableRow.appendChild(tableHeaderCell);
+    }
+
+    tableHead.appendChild(tableRow);
+    table.appendChild(tableHead);
+
+    // Create table body
+    const tableBody = document.createElement("tbody");
+
+    // Loop through contributor data and add rows with S.No
+    let count = 1;
+    for (const member of data) {
+      const tableBodyRow = document.createElement("tr");
+
+      const tableDataCells = [
+        count, // S.No (starting from 1)
+        member.date,
+        member.name,
+        member.contributedAmount,
+        member.debitAmount,
+        member.totalAmount,
+      ];
+
+      count++; // Increment S.No for each row
+
+      for (const data of tableDataCells) {
+        const tableBodyCell = document.createElement("td");
+        tableBodyCell.textContent = data;
+        tableBodyRow.appendChild(tableBodyCell);
+      }
+
+      tableBody.appendChild(tableBodyRow);
+    }
+
+    table.appendChild(tableBody);
+
+    return { heading, table };
+  }
+
+  // Create tables for Founding Members and Additional Members
+  const foundingMembersTable = createTable(contributorData[0].members, contributorData[0].sectionName);
+  const additionalMembersTable = createTable(contributorData[1].members, contributorData[1].sectionName);
+
+  // Append headings and tables to the content element
+  content.appendChild(foundingMembersTable.heading);
+  content.appendChild(foundingMembersTable.table);
+
+  content.appendChild(additionalMembersTable.heading);
+  content.appendChild(additionalMembersTable.table);
+}
 function showNoDataFound() {
   content.innerHTML = "";
   const heading = document.createElement("h2");
@@ -369,7 +722,7 @@ function showNoDataFound() {
 }
 
 allTransactionsBtn.addEventListener("click", showAllTransactions);
-contributionsBtn.addEventListener("click", showNoDataFound);
+contributionsBtn.addEventListener("click", showContributions);
 disbursementsBtn.addEventListener("click", showNoDataFound);
 expensesBtn.addEventListener("click", showNoDataFound);
-currencySelect.addEventListener("change", showAllTransactions)
+currencySelect.addEventListener("change", showAllTransactions);
