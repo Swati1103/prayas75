@@ -5,6 +5,26 @@ const expensesBtn = document.getElementById("expenses");
 const currencySelect = document.getElementById("currency");
 const reportResults = document.getElementById("report-results");
 const content = document.getElementById("batch1");
+
+let usdToINR = 80; 
+let previouslyClickedButton;
+
+const convertToUSD = async () => {
+  try {
+    const apiKey = "b6e6ae8dc07f9d2a1934"; // Assuming you have an API key
+    const url = `https://free.currconv.com/api/v7/convert?q=USD_INR&compact=ultra&apiKey=${apiKey}`;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
+    const json = await response.json();
+    usdToINR = json.USD_INR;
+  } catch (error) {
+    console.error("Error fetching conversion rate:", error.message);
+  }
+};
+convertToUSD();
+
 const transactionsData = [
   {
     name: "Subham Kumar",
@@ -82,9 +102,9 @@ const transactionsData = [
     name: "Raghunandan Singh",
     rollno: "2002004D",
     branch: "Production",
-    syr: "20000",
+    syr: 20000,
     tyr: 20000,
-    fyr: "20000",
+    fyr: 20000,
   },
   {
     name: "Mohammad Mehran",
@@ -99,7 +119,7 @@ const transactionsData = [
     rollno: 1801034,
     branch: "Electrical",
     syr: "Ineligible",
-    tyr: "20000",
+    tyr: 20000,
     fyr: "N/A",
   },
 
@@ -526,7 +546,37 @@ const contributorData = [
 const batch1Size = 12; // Number of elements in the 1st table (Jubilee Batch Scholarship 2019-2023)
 const batch2Size = 10; // Number of elements in the 2nd table (Jubilee Batch Scholarship 2020-2024)
 
-function showAllTransactions() {
+function handleButtonClick(e) {
+  let clickedButton = e.target.id;
+  if(clickedButton == "currency")
+  {
+    clickedButton = previouslyClickedButton;
+  }
+  else
+  {
+    previouslyClickedButton = e.target.id;
+  }
+  const selectedCurrency = currencySelect.value;
+  let reportData; 
+  switch (clickedButton) {
+    case "all-transactions":
+      showAllTransactions(selectedCurrency, usdToINR);
+      break;
+    case "contributions":
+      showContributions(selectedCurrency, usdToINR)
+      break;
+    case "disbursements":
+      showNoDataFound();
+      break;
+    case "expenses":
+      showNoDataFound();
+      break;
+    default:
+      console.warn("Error");
+  }
+}
+
+function showAllTransactions(selectedCurrency , usdToINR) {
   content.innerHTML = "";
   function createTable(data, headingText) {
     // Create the heading element
@@ -591,14 +641,13 @@ function showAllTransactions() {
   }
 
   function formatCurrency(amount) {
-    const selectedCurrency = currencySelect.value;
     if (
       selectedCurrency === "usd" &&
       amount !== "TBD" &&
       amount !== "N/A" &&
       amount != "Ineligible"
     ) {
-      return `$ ${(amount / 80).toLocaleString()}`; // Format to USD with commas
+      return `$ ${(amount /usdToINR ).toLocaleString()}`; // Format to USD with commas
     } else if (
       selectedCurrency === "inr" &&
       amount !== "TBD" &&
@@ -645,7 +694,7 @@ function showAllTransactions() {
 }
 
 //  Contribution Button
-function showContributions() {
+function showContributions(selectedCurrency, usdToINR) {
   content.innerHTML = "";
 
   function createTable(data, headingText) {
@@ -660,7 +709,14 @@ function showContributions() {
     const tableRow = document.createElement("tr");
 
     // Create table headers with S.No
-    const headers = ["S.No", "Date", "Name", "Contributed Amount", "Debit Amount", "Total Amount"];
+    const headers = [
+      "S.No",
+      "Date",
+      "Name",
+      "Contributed Amount",
+      "Debit Amount",
+      "Total Amount",
+    ];
     for (const header of headers) {
       const tableHeaderCell = document.createElement("th");
       tableHeaderCell.textContent = header;
@@ -673,6 +729,26 @@ function showContributions() {
     // Create table body
     const tableBody = document.createElement("tbody");
 
+    function formatCurrency(amount) {
+      if (
+        selectedCurrency === "usd" &&
+        amount !== "TBD" &&
+        amount !== "N/A" &&
+        amount != "Ineligible"
+      ) {
+        return `$ ${(amount /usdToINR ).toLocaleString()}`; // Format to USD with commas
+      } else if (
+        selectedCurrency === "inr" &&
+        amount !== "TBD" &&
+        amount !== "N/A" &&
+        amount != "Ineligible"
+      ) {
+        return `₹ ${amount}`; // Display Rupee symbol
+      } else {
+        return amount; // Default (no formatting)
+      }
+    }
+
     // Loop through contributor data and add rows with S.No
     let count = 1;
     for (const member of data) {
@@ -682,9 +758,9 @@ function showContributions() {
         count, // S.No (starting from 1)
         member.date,
         member.name,
-        member.contributedAmount,
-        member.debitAmount,
-        member.totalAmount,
+        formatCurrency(member.contributedAmount),
+        formatCurrency(member.debitAmount),
+        formatCurrency(member.totalAmount),
       ];
 
       count++; // Increment S.No for each row
@@ -704,8 +780,14 @@ function showContributions() {
   }
 
   // Create tables for Founding Members and Additional Members
-  const foundingMembersTable = createTable(contributorData[0].members, contributorData[0].sectionName);
-  const additionalMembersTable = createTable(contributorData[1].members, contributorData[1].sectionName);
+  const foundingMembersTable = createTable(
+    contributorData[0].members,
+    contributorData[0].sectionName
+  );
+  const additionalMembersTable = createTable(
+    contributorData[1].members,
+    contributorData[1].sectionName
+  );
 
   // Append headings and tables to the content element
   content.appendChild(foundingMembersTable.heading);
@@ -721,8 +803,8 @@ function showNoDataFound() {
   content.appendChild(heading);
 }
 
-allTransactionsBtn.addEventListener("click", showAllTransactions);
-contributionsBtn.addEventListener("click", showContributions);
-disbursementsBtn.addEventListener("click", showNoDataFound);
-expensesBtn.addEventListener("click", showNoDataFound);
-currencySelect.addEventListener("change", showAllTransactions);
+allTransactionsBtn.addEventListener("click", handleButtonClick);
+contributionsBtn.addEventListener("click", handleButtonClick);
+disbursementsBtn.addEventListener("click", handleButtonClick);
+expensesBtn.addEventListener("click", handleButtonClick);
+currencySelect.addEventListener("change", handleButtonClick);
