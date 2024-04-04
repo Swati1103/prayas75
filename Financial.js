@@ -347,7 +347,7 @@ const contributorData = [
       },
       {
         date: "XX/XX/XXXX",
-        name: "RAJEEV RANJAN",
+        name: "RAJEEVA RANJAN",
         contributedAmount: 0,
         debitAmount: 0,
         totalAmount: 0,
@@ -361,7 +361,7 @@ const contributorData = [
       },
       {
         date: "XX/XX/XXXX",
-        name: "SUJIT MITRA",
+        name: "SUJIT KUMAR MITRA",
         contributedAmount: 0,
         debitAmount: 0,
         totalAmount: 0,
@@ -387,7 +387,7 @@ const contributorData = [
       },
       {
         date: "XX/XX/XXXX",
-        name: "BAIJU P GUPTA",
+        name: "BAIJU PRASAD GUPTA",
         contributedAmount: 0,
         debitAmount: 0,
         totalAmount: 0,
@@ -436,7 +436,7 @@ const contributorData = [
       },
       {
         date: "XX/XX/XXXX",
-        name: "MUKUND BHATTA",
+        name: "MUKUND CHANDRA BHATTA",
         contributedAmount: 0,
         debitAmount: 0,
         totalAmount: 0,
@@ -758,9 +758,12 @@ function showContributions(selectedCurrency, usdToINR) {
         count, // S.No (starting from 1)
         member.date,
         member.name,
-        formatCurrency(member.contributedAmount),
-        formatCurrency(member.debitAmount),
-        formatCurrency(member.totalAmount),
+        // formatCurrency(member.contributedAmount),
+        // formatCurrency(member.debitAmount),
+        // formatCurrency(member.totalAmount),
+        "",
+        "",
+        "",
       ];
 
       count++; // Increment S.No for each row
